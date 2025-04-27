@@ -1,7 +1,8 @@
 <?php
 
-use Dotenv\Dotenv;
+namespace App\Config;
 
+use Dotenv\Dotenv;
 
 class TelegramConnection
 {
@@ -13,12 +14,11 @@ class TelegramConnection
             $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
             $dotenv->load();
         }
-
-        $this->token = $token ?? $_ENV['TELEGRAM_BOT_TOKEN'];
+        $this->token = $_ENV['TELEGRAM_BOT_TOKEN'];
         $this->apiurl = $_ENV['TELEGRAM_API_URL'] . $this->token . '/';
     }
 
-    public function getConnection(): string
+    public function getApiUrl(): string
     {
         return $this->apiurl;
     }
