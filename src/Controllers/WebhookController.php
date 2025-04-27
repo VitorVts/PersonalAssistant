@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Config\TelegramConnection;
 use App\Services\TelegramBot;
 
 class WebhookController
@@ -10,7 +11,8 @@ class WebhookController
 
   public function __construct()
   {
-    $this->bot = new TelegramBot();
+    $connection = new TelegramConnection();
+    $this->bot = new TelegramBot($connection);
   }
 
   public function handle()

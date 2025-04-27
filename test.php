@@ -1,13 +1,6 @@
-<?php
 
-require_once __DIR__ . '/vendor/autoload.php';
 
-use App\Services\TelegramBot;
+https://api.telegram.org/bot7881481989:AAGVeuF5YQKnzCifNd5hHiI2YOPDzZe0OvE/deleteWebhook deletewebohook
 
-$bot = new TelegramBot();
 
-// Coloque aqui o seu chat_id (pode ser seu ID pessoal ou o de um grupo)
-$chatId = 'SEU_CHAT_ID';
-$text = 'Olá, este é um teste do meu bot! 🚀';
-
-$bot->sendMessage($chatId, $text);
+https://api.telegram.org/bot7881481989:AAGVeuF5YQKnzCifNd5hHiI2YOPDzZe0OvE/setWebhook?url=https://evil-schools-exist.loca.lt/PersonalAssistant/webhook.php

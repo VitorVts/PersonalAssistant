@@ -2,9 +2,10 @@
 
 namespace App\Config;
 
+use App\Contracts\ConnectionInterface;
 use Dotenv\Dotenv;
 
-class TelegramConnection
+class TelegramConnection implements ConnectionInterface
 {
     private string $apiurl;
     private string $token;

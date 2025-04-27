@@ -4,16 +4,17 @@ namespace App\Services;
 
 use GuzzleHttp\Client;
 use App\Config\TelegramConnection;
+use App\Contracts\ConnectionInterface;
 
 class TelegramBot
 {
   private Client $client;
   private TelegramConnection $conn;
 
-    public function __construct()
+    public function __construct(ConnectionInterface $connection)
     {
       $this->client = new Client();
-      $this->conn = new TelegramConnection();
+      $this->conn = $connection;
     }
 
 
