@@ -1,7 +1,4 @@
-
-
-https://api.telegram.org/bot7881481989:AAGVeuF5YQKnzCifNd5hHiI2YOPDzZe0OvE/deleteWebhook deletewebohook
-
-
-https://api.telegram.org/bot7881481989:AAGVeuF5YQKnzCifNd5hHiI2YOPDzZe0OvE/setWebhook?url=https://small-streets-walk.loca.lt/PersonalAssistant/webhook.php
-    https://small-streets-walk.loca.lt
+<?php
+$url = 'https://social-turkeys-yawn.loca.lt/PersonalAssistant/webhook.php';
+$encoded_url = urlencode($url);
+$setWebhookUrl = "https://api.telegram.org/bot7881481989:AAGVeuF5YQKnzCifNd5hHiI2YOPDzZe0OvE/setWebhook?url=https://nine-bottles-cover.loca.lt/";

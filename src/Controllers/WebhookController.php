@@ -31,15 +31,18 @@ class WebhookController
                 $text = $update['message']['text'];
 
                 $response = $this->gemini->enviarMensagem($text);
-
+                
                 if (empty($response)) {
                     $this->bot->sendMessage($chatId, 'Desculpe, algo deu errado. Tente novamente!');
                     return;
                 }
-
                 $this->bot->sendMessage($chatId, $response);
+               
             }
         } catch (\Exception $e) {
+            error_log("Erro ao processar o webhook: " . $e->getMessage());
+            http_response_code(500);
+            echo "Erro ao processar o webhook.";
             $this->bot->sendMessage($chatId, 'Erro inesperado. Tente novamente mais tarde.');
         }
     }

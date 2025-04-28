@@ -6,4 +6,3 @@ use App\Controllers\WebhookController;
 
 $controller = new WebhookController();
 $controller->handle();
-

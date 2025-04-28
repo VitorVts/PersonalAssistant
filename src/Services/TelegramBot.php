@@ -8,8 +8,8 @@ use App\Contracts\ConnectionInterface;
 
 class TelegramBot
 {
-  private Client $client;
-  private TelegramConnection $conn;
+    private Client $client;
+    private TelegramConnection $conn;
 
     public function __construct(ConnectionInterface $connection)
     {
@@ -27,9 +27,9 @@ class TelegramBot
                 'text' => $text,
             ],
         ]);
-    } catch (\GuzzleHttp\Exception\GuzzleException $e) {
+      } catch (\GuzzleHttp\Exception\GuzzleException $e) {
         echo 'Erro ao enviar mensagem: ' . $e->getMessage();
-    }
+      }
     }
 
 }
